@@ -11,7 +11,7 @@ RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^comments$ controllers/comments.php?action=index
 
 RewriteCond %{REQUEST_METHOD} ^POST$
-RewriteRule ^comments controllers/comments.php?action=post
+RewriteRule ^comments$ controllers/comments.php?action=post
 
 RewriteCond %{REQUEST_METHOD} ^PUT$
 RewriteRule ^comments/([0-9]+)$ controllers/comments.php?action=update&id=$1
