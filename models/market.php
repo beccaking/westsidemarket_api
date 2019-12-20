@@ -1,5 +1,5 @@
 <?php
-$dbconn = pg_connect("host=localhost dbname=westsidemarket")
+$dbconn = pg_connect("host=localhost dbname=westsidemarket");
 
 class Vendor {
   public $id;
