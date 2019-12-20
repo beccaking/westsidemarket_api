@@ -9,3 +9,7 @@ INSERT INTO vendors (id, name, image, description, contact) VALUES ('A1', 'Johnn
 CREATE TABLE comments (id SERIAL, username text, vendorid VARCHAR(5), content text, commentdate timestamp);
 
 INSERT INTO comments (username, vendorid, content, commentdate) VALUES ('Becca','A1', 'Johnny Hot Dog is the best!', CURRENT_TIMESTAMP);
+
+CREATE TABLE users (id SERIAL, username text, password text);
+
+INSERT INTO users (username, password) VALUES ('Becca', 'Becca');
