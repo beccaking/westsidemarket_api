@@ -46,7 +46,7 @@ class Comments {
   }
 
   static function update($updated_comment){
-    $query = "UPDATE comments SET username = $1, vendorid = $2, content = $3, commentdate = CURRENT_TIMESTAMP WHERE id=$4)";
+    $query = "UPDATE comments SET username = $1, vendorid = $2, content = $3, commentdate = CURRENT_TIMESTAMP WHERE id=$4";
     $query_params = array($updated_comment->username, $updated_comment->vendorid, $updated_comment->content, $updated_comment->id);
     $result = pg_query_params($query, $query_params);
     return self::all();
