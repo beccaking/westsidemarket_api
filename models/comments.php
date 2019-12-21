@@ -1,5 +1,5 @@
 <?php
-$dbconn = pg_connect("host=localhost dbname=westsidemarket")
+$dbconn = pg_connect("host=localhost dbname=westsidemarket");
 
 class Comment {
   public $id;
@@ -39,14 +39,14 @@ class Comments {
   }
 
   static function create($comment){
-    $query = "INSERT INTO comments (username, vendorid, content, commentdate) VALUES $1, $2, $3, CURRENT_TIMESTAMP)";
+    $query = "INSERT INTO comments (username, vendorid, content, commentdate) VALUES ($1, $2, $3, CURRENT_TIMESTAMP)";
     $query_params = array($comment->username, $comment->vendorid, $comment->content);
     $result = pg_query_params($query, $query_params);
     return self::all();
   }
 
   static function update($updated_comment){
-    $query = "UPDATE comments SET username = $1, vendorid = $2, content = $3, commentdate = CURRENT_TIMESTAMP WHERE id=$4)";
+    $query = "UPDATE comments SET username = $1, vendorid = $2, content = $3, commentdate = CURRENT_TIMESTAMP WHERE id=$4";
     $query_params = array($updated_comment->username, $updated_comment->vendorid, $updated_comment->content, $updated_comment->id);
     $result = pg_query_params($query, $query_params);
     return self::all();
