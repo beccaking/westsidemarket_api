@@ -11,6 +11,8 @@ if ($_REQUEST['action'] === 'post'){
 } else if ($_REQUEST['action'] === 'delete'){
   session_unset();
   session_destroy();
+} else if ($_REQUEST['action'] === 'index'){
+  echo $_SESSION['username']
 }
 
  ?>

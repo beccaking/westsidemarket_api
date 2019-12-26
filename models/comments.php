@@ -21,9 +21,9 @@ if(getenv('DATABASE_URL')){
 class Comment {
   public $id;
   public $vendorid;
-  public $text;
+  public $content;
   public $username;
-  public $datetime;
+  public $commentdate;
 
   public function __construct($id, $vendorid, $content, $username, $commentdate){
     $this->id = $id;

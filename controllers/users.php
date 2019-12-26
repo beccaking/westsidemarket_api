@@ -8,6 +8,6 @@ if($_REQUEST['action'] === 'post'){
   $new_user = new User(null, $body_object->username, $body_object->password);
   session_start();
   $_SESSION["username"] = $new_user->username;
-  echo $_SESSION["username"];
+  echo json_encode($_SESSION["username"]);
 }
 ?>
