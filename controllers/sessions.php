@@ -12,7 +12,7 @@ if ($_REQUEST['action'] === 'post'){
   session_unset();
   session_destroy();
 } else if ($_REQUEST['action'] === 'index'){
-  echo $_SESSION['username']
+  echo $_SESSION['username'];
 }
 
  ?>
