@@ -56,7 +56,7 @@ class Comments {
   }
 
   static function create($comment){
-    $query = "INSERT INTO comments (username, vendorid, content, commentdate) VALUES ($1, $2, $3, CONVERT(date, CURRENT_TIMESTAMP))";
+    $query = "INSERT INTO comments (username, vendorid, content, commentdate) VALUES ($1, $2, $3, CURRENT_TIMESTAMP)";
     $query_params = array($comment->username, $comment->vendorid, $comment->content);
     $result = pg_query_params($query, $query_params);
     return self::all();
